@@ -11,3 +11,27 @@
 @mixin column-width($numberColumns: 3) {
 	width: math.div($columns--margin * ($numberColumns - 1), $numberColumns) or calc(($columns--margin * ($numberColumns - 1)) / $numberColumns);
 }
+
+@mixin sm {
+	@media screen and (min-width: $size__site-sm) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media screen and (min-width: $size__site-md) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: $size__site-lg) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: $size__site-xl) {
+		@content;
+	}
+}
